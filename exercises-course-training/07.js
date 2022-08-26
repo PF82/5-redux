@@ -21,9 +21,20 @@ const defaultState = {
 };
 
 const authReducer = (state = defaultState, action) => {
-// Change code below this line
-
-// Change code above this line
+  // Change code below this line
+  switch (action.type) {
+    case "LOGIN":
+      return {
+        authenticated: true
+      };
+    case "LOGOUT":
+      return {
+        authenticated: false
+      };
+    default:
+      return defaultState;
+  }
+  // Change code above this line
 };
 
 const store = Redux.createStore(authReducer);
