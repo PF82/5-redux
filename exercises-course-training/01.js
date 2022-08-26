@@ -29,3 +29,4 @@ const reducer = (state = 5) => {
 // For example: Redux.createStore()
 // Define the store here:
 
+const store = Redux.createStore(reducer);

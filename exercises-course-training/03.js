@@ -16,4 +16,6 @@ set to the string 'LOGIN'.
 
 // Define an action here:
 
-
+const action = {
+    type: 'LOGIN'
+}

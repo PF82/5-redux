@@ -13,3 +13,12 @@ const action = {
 }
 // Define an action creator here:
 
+function actionCreator() {
+    return action;
+}
+
+or
+
+const actionCreator = () => {
+  return action;
+}

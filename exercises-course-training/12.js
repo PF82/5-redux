@@ -31,14 +31,14 @@ const receivedData = (data) => { return { type: RECEIVED_DATA, users: data.users
 
 const handleAsync = () => {
     return function (dispatch) {
-// Dispatch request action here
-
+        // Dispatch request action here
+        dispatch(requestingData());
         setTimeout(function () {
             let data = {
                 users: ['Jeff', 'William', 'Alice']
             }
-// Dispatch received data action here
-
+            // Dispatch received data action here
+            dispatch(receivedData(data));
         }, 2500);
     }
 };

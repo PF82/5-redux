@@ -10,6 +10,9 @@ and the action creators to reference these constants instead of string values.
 Note: It's generally a convention to write constants in all uppercase, and this is standard practice in Redux as well.
 */
 
+const LOGIN = 'LOGIN';
+const LOGOUT = 'LOGOUT';
+
 const defaultState = {
   authenticated: false
 };
@@ -17,11 +20,11 @@ const defaultState = {
 const authReducer = (state = defaultState, action) => {
 
   switch (action.type) {
-    case 'LOGIN':
+    case LOGIN:
       return {
         authenticated: true
       }
-    case 'LOGOUT':
+    case LOGOUT:
       return {
         authenticated: false
       }
@@ -37,12 +40,15 @@ const store = Redux.createStore(authReducer);
 
 const loginUser = () => {
   return {
-    type: 'LOGIN'
+    type: LOGIN
   }
 };
 
 const logoutUser = () => {
   return {
-    type: 'LOGOUT'
+    type: LOGOUT
   }
 };
+
+
+

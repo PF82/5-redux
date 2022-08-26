@@ -14,4 +14,4 @@ const store = Redux.createStore(
 
 // Change code below this line
 
-
+const currentState = store.getState();
